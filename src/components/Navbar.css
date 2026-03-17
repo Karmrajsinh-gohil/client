@@ -1,0 +1,252 @@
+/* Citizen Navbar Styles */
+
+.citizen-navbar {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%) !important;
+  border-bottom: 3px solid #f39c12;
+  min-height: 60px;
+}
+
+.citizen-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: white !important;
+  text-decoration: none;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.flag-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.brand-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-top: -2px;
+}
+
+/* Navigation Items */
+.nav-item-custom {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-item-custom:hover {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-item-custom.active {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+.nav-item-custom i {
+  font-size: 1rem;
+}
+
+/* User Dropdown */
+.user-dropdown .dropdown-toggle {
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.375rem 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.user-dropdown .dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.user-dropdown .dropdown-toggle::after {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.user-dropdown .dropdown-menu {
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  min-width: 200px;
+}
+
+.user-dropdown .dropdown-item {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.user-dropdown .dropdown-item:hover {
+  background: #f8f9fa;
+  color: #004e89;
+}
+
+.user-dropdown .dropdown-item i {
+  width: 16px;
+  text-align: center;
+}
+
+.user-dropdown .dropdown-divider {
+  margin: 0.25rem 0;
+}
+
+/* Mobile Offcanvas */
+.mobile-offcanvas {
+  width: 280px !important;
+}
+
+.mobile-offcanvas .offcanvas-header {
+  border-bottom: none;
+  padding: 1rem 1.5rem;
+}
+
+.mobile-user-info {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.mobile-nav-item {
+  color: #495057 !important;
+  font-weight: 500;
+  padding: 0.875rem 1rem;
+  margin: 0.125rem 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav-item:hover {
+  background: #e3f2fd;
+  color: #004e89 !important;
+  text-decoration: none;
+}
+
+.mobile-nav-item i {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.mobile-nav-item.text-danger {
+  color: #dc3545 !important;
+}
+
+.mobile-nav-item.text-danger:hover {
+  background: #f8d7da;
+  color: #dc3545 !important;
+}
+
+.mobile-footer {
+  background: #f8f9fa;
+}
+
+/* Navbar Toggle */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .citizen-navbar .navbar-collapse {
+    background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    margin-top: 1rem;
+  }
+
+  .nav-item-custom {
+    margin: 0.25rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  .brand-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .flag-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .nav-item-custom,
+  .user-dropdown .dropdown-toggle,
+  .mobile-nav-item {
+    transition: none;
+  }
+
+  .nav-item-custom:hover,
+  .user-dropdown .dropdown-toggle:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .citizen-navbar {
+    border-bottom: 3px solid #000;
+  }
+
+  .nav-item-custom {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .user-dropdown .dropdown-toggle {
+    border: 2px solid #fff;
+  }
+}
+
+/* Focus States */
+.nav-item-custom:focus,
+.user-dropdown .dropdown-toggle:focus,
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.dropdown-item:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 78, 137, 0.25);
+}

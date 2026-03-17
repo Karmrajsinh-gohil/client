@@ -1,0 +1,350 @@
+/* Citizen Registration Page Styles */
+
+.citizen-register-wrapper {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.citizen-register-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.03"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.03"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.02"/><circle cx="10" cy="50" r="0.5" fill="%23ffffff" opacity="0.02"/><circle cx="90" cy="30" r="0.5" fill="%23ffffff" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+/* Branding Section */
+.register-branding-section {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+  position: relative;
+  min-height: 100vh;
+}
+
+.register-branding-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="flag" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="33.33" fill="%23FF9933"/><rect width="100" height="33.33" y="33.33" fill="%23FFFFFF"/><rect width="100" height="33.34" y="66.66" fill="%23008800"/><circle cx="50" cy="50" r="15" fill="%23000080"/><circle cx="50" cy="50" r="12" fill="%23FFFFFF"/><circle cx="50" cy="50" r="9" fill="%23000080"/><path d="M50 35 L52 45 L62 45 L54 51 L57 61 L50 55 L43 61 L46 51 L38 45 L48 45 Z" fill="%23FFFFFF"/></pattern></defs><rect width="100" height="100" fill="url(%23flag)" opacity="0.1"/></svg>');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.branding-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.branding-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px;
+}
+
+.branding-content .lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.features-container {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.features-container h4 {
+  color: white;
+  font-weight: 600;
+}
+
+.features-container ul li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.features-container ul li i {
+  font-size: 1.1rem;
+  color: #f39c12;
+}
+
+.govt-info {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.govt-info p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Container */
+.register-form-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 78, 137, 0.15);
+  border: 1px solid rgba(0, 78, 137, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.register-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #004e89, #1a75b8, #f39c12);
+}
+
+/* Form Elements */
+.form-label {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.form-control:focus {
+  border-color: #004e89;
+  box-shadow: 0 0 0 0.2rem rgba(0, 78, 137, 0.25);
+  background-color: white;
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+.form-control.is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.input-group .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  background-color: #f8f9fa;
+  border-color: #e9ecef;
+  color: #6c757d;
+}
+
+.input-group .btn:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+  color: #495057;
+}
+
+.input-group .btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 78, 137, 0.25);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 78, 137, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 78, 137, 0.4);
+  background: linear-gradient(135deg, #003d6b 0%, #1565a0 100%);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  background: #6c757d;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 12px;
+  border: none;
+  font-weight: 500;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+/* Links */
+.text-primary {
+  color: #004e89 !important;
+}
+
+.text-primary:hover {
+  color: #003d6b !important;
+}
+
+/* Checkboxes */
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 4px;
+  border: 2px solid #004e89;
+  background-color: white;
+}
+
+.form-check-input:checked {
+  background-color: #004e89;
+  border-color: #004e89;
+}
+
+.form-check-input:focus {
+  border-color: #004e89;
+  box-shadow: 0 0 0 0.2rem rgba(0, 78, 137, 0.25);
+}
+
+.form-check-label {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .register-branding-section {
+    display: none !important;
+  }
+
+  .register-form-container {
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+
+  .branding-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .register-form-container {
+    margin: 0.5rem;
+    padding: 1.5rem;
+  }
+
+  .register-form-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .form-control {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .input-group .btn {
+    padding: 0.625rem 0.875rem;
+  }
+}
+
+/* Loading States */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary {
+    transition: none;
+  }
+
+  .form-control {
+    transition: none;
+  }
+
+  .btn-primary:hover {
+    transform: none;
+  }
+}
+
+/* Focus States */
+.btn:focus,
+.form-control:focus,
+.form-check-input:focus {
+  outline: none;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .register-form-container {
+    border: 2px solid #000;
+  }
+
+  .form-control {
+    border: 2px solid #000;
+  }
+
+  .btn-primary {
+    border: 2px solid #000;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .citizen-register-wrapper {
+    background: white !important;
+  }
+
+  .register-branding-section {
+    display: none !important;
+  }
+
+  .register-form-container {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}

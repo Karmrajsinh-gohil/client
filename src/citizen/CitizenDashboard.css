@@ -1,0 +1,310 @@
+/* Citizen Dashboard Styles */
+
+@import "../components/Navbar.css";
+@import "../components/Footer.css";
+
+.citizen-dashboard-wrapper {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+  box-shadow: 0 4px 20px rgba(0, 78, 137, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-top: 60px; /* Account for fixed navbar */
+}
+
+.dashboard-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="flag" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="33.33" fill="%23FF9933"/><rect width="100" height="33.33" y="33.33" fill="%23FFFFFF"/><rect width="100" height="33.34" y="66.66" fill="%23008800"/><circle cx="50" cy="50" r="15" fill="%23000080"/><circle cx="50" cy="50" r="12" fill="%23FFFFFF"/><circle cx="50" cy="50" r="9" fill="%23000080"/><path d="M50 35 L52 45 L62 45 L54 51 L57 61 L50 55 L43 61 L46 51 L38 45 L48 45 Z" fill="%23FFFFFF"/></pattern></defs><rect width="100" height="100" fill="url(%23flag)" opacity="0.1"/></svg>');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Quick Action Cards */
+.quick-action-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  background: white;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.action-icon {
+  transition: transform 0.3s ease;
+}
+
+.quick-action-card:hover .action-icon {
+  transform: scale(1.1);
+}
+
+/* Statistics Cards */
+.stats-card {
+  border-radius: 15px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Complaint Cards */
+.complaint-card {
+  border-radius: 15px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.complaint-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.priority-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #003d6b 0%, #1565a0 100%);
+}
+
+.btn-outline-primary {
+  border-color: #004e89;
+  color: #004e89;
+}
+
+.btn-outline-primary:hover {
+  background-color: #004e89;
+  border-color: #004e89;
+}
+
+/* Badges */
+.badge {
+  font-weight: 600;
+  padding: 0.4em 0.8em;
+  border-radius: 20px;
+}
+
+/* Cards */
+.card {
+  border-radius: 15px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Icons */
+.bi {
+  vertical-align: -0.125em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header .h3 {
+    font-size: 1.5rem;
+  }
+
+  .stats-number h2 {
+    font-size: 2rem;
+  }
+
+  .action-icon .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .quick-action-card .card-body {
+    padding: 1rem;
+  }
+
+  .complaint-card .card-body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-header {
+    padding: 1rem 0;
+  }
+
+  .dashboard-header .display-4 {
+    font-size: 2rem;
+  }
+
+  .stats-number h2 {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Loading States */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quick-action-card,
+.stats-card,
+.complaint-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Government Branding */
+.govt-branding {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.govt-branding h5 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.govt-branding p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+  color: white;
+  border-radius: 15px 15px 0 0;
+  border-bottom: none;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 1rem 1.5rem;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .quick-action-card,
+  .stats-card,
+  .complaint-card,
+  .btn {
+    transition: none;
+    animation: none;
+  }
+
+  .quick-action-card:hover,
+  .stats-card:hover,
+  .complaint-card:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #000;
+  }
+
+  .btn {
+    border: 2px solid #000;
+  }
+
+  .badge {
+    border: 1px solid #000;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .citizen-dashboard-wrapper {
+    background: white !important;
+  }
+
+  .dashboard-header {
+    background: #004e89 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .btn,
+  .modal {
+    display: none !important;
+  }
+
+  .card {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+  }
+}

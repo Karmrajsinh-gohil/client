@@ -1,0 +1,707 @@
+/* ComplaintRegister.css - BPGSTS Citizen Complaint Registration Page */
+/* TYBCA SEM-6 Project 2025-26 - Ambaba Commerce College, MIBM & DICA, Sabargam */
+
+.complaint-register-page {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.complaint-register-page .flag-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.complaint-register-page .flag-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.complaint-register-page .project-info {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid #dee2e6;
+}
+
+/* Step Indicator */
+.step-indicator {
+  position: relative;
+}
+
+.step-indicator::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e9ecef;
+  z-index: 1;
+}
+
+.steps {
+  position: relative;
+  z-index: 2;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e9ecef;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  font-weight: bold;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-circle {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+  color: white;
+  border-color: #004e89;
+  box-shadow: 0 0 0 3px rgba(0, 78, 137, 0.2);
+}
+
+/* Category Cards */
+.category-card {
+  transition: all 0.3s ease;
+  border: 2px solid #e9ecef;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #004e89;
+}
+
+.category-card.selected {
+  border-color: #004e89;
+  background: linear-gradient(135deg, rgba(0, 78, 137, 0.05) 0%, rgba(26, 117, 184, 0.05) 100%);
+  box-shadow: 0 0 0 3px rgba(0, 78, 137, 0.2);
+}
+
+.category-icon {
+  transition: all 0.3s ease;
+}
+
+.category-card.selected .category-icon {
+  transform: scale(1.1);
+}
+
+/* Form Styling */
+.complaint-register-page .card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.complaint-register-page .card-header {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%) !important;
+  border: none;
+  padding: 2rem;
+}
+
+.complaint-register-page .card-header h4 {
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.complaint-register-page .form-label {
+  color: #004e89;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.complaint-register-page .form-control,
+.complaint-register-page .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.complaint-register-page .form-control-lg {
+  padding: 1rem 1.25rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+}
+
+.complaint-register-page .form-control:focus,
+.complaint-register-page .form-select:focus {
+  border-color: #004e89;
+  box-shadow: 0 0 0 0.25rem rgba(0, 78, 137, 0.15);
+  transform: translateY(-2px);
+  background: white;
+}
+
+.complaint-register-page .form-control::placeholder {
+  color: #6c757d;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* File Upload Area */
+.file-upload-area {
+  border: 2px dashed #dee2e6 !important;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.file-upload-area:hover {
+  border-color: #004e89 !important;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 78, 137, 0.2);
+}
+
+.file-upload-area.dragover {
+  border-color: #1a75b8 !important;
+  background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Selected Files */
+.selected-files {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+.file-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.file-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+/* Buttons */
+.complaint-register-page .btn {
+  border-radius: 10px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.complaint-register-page .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.complaint-register-page .btn:hover::before {
+  left: 100%;
+}
+
+.complaint-register-page .btn-primary {
+  background: linear-gradient(135deg, #004e89 0%, #1a75b8 100%);
+  box-shadow: 0 4px 15px rgba(0, 78, 137, 0.3);
+}
+
+.complaint-register-page .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 78, 137, 0.4);
+}
+
+.complaint-register-page .btn-outline-primary {
+  border: 2px solid #004e89;
+  color: #004e89;
+  background: transparent;
+}
+
+.complaint-register-page .btn-outline-primary:hover {
+  background: #004e89;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 78, 137, 0.3);
+}
+
+.complaint-register-page .btn-outline-danger {
+  border: 2px solid #dc3545;
+  color: #dc3545;
+}
+
+.complaint-register-page .btn-outline-danger:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+  transform: scale(1.05);
+}
+
+.complaint-register-page .btn-outline-info {
+  border: 2px solid #17a2b8;
+  color: #17a2b8;
+}
+
+.complaint-register-page .btn-outline-info:hover {
+  background: #17a2b8;
+  border-color: #17a2b8;
+  transform: translateY(-2px);
+}
+
+.complaint-register-page .btn-outline-success {
+  border: 2px solid #198754;
+  color: #198754;
+}
+
+.complaint-register-page .btn-outline-success:hover {
+  background: #198754;
+  border-color: #198754;
+  transform: translateY(-2px);
+}
+
+/* Progress Bar */
+.progress-lg {
+  height: 8px;
+  border-radius: 4px;
+  background: #e9ecef;
+  overflow: hidden;
+}
+
+.progress-lg .progress-bar {
+  background: linear-gradient(90deg, #004e89 0%, #1a75b8 50%, #004e89 100%);
+  transition: width 0.4s ease;
+  animation: progress-shine 2s ease-in-out infinite;
+}
+
+@keyframes progress-shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Alerts */
+.complaint-register-page .alert {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.complaint-register-page .alert::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: currentColor;
+}
+
+.complaint-register-page .alert-success {
+  background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+  color: #0c5460;
+}
+
+.complaint-register-page .alert-danger {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+}
+
+.complaint-register-page .alert-info {
+  background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+  color: #0c5460;
+  border-left: 4px solid #17a2b8;
+}
+
+/* Badges */
+.complaint-register-page .badge {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Modal Styling */
+.complaint-register-page .modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.complaint-register-page .modal-header {
+  border-radius: 15px 15px 0 0;
+  border: none;
+  padding: 1.5rem 2rem;
+}
+
+.complaint-register-page .modal-body {
+  padding: 2rem;
+}
+
+.complaint-register-page .modal-footer {
+  border: none;
+  padding: 1.5rem 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .complaint-register-page .display-5 {
+    font-size: 2rem;
+  }
+
+  .complaint-register-page .card-body {
+    padding: 1.5rem;
+  }
+
+  .complaint-register-page .card-header {
+    padding: 1.5rem;
+  }
+
+  .complaint-register-page .category-card {
+    margin-bottom: 1rem;
+  }
+
+  .complaint-register-page .d-flex.gap-3 {
+    flex-direction: column;
+  }
+
+  .complaint-register-page .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .complaint-register-page .step-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .complaint-register-page .flag-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .complaint-register-page .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .complaint-register-page .card-header h4 {
+    font-size: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .complaint-register-page .badge {
+    display: block;
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+
+  .complaint-register-page .form-control-lg {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Loading States */
+.complaint-register-page .spinner-border {
+  color: #004e89;
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Custom Scrollbar */
+.selected-files::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selected-files::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.selected-files::-webkit-scrollbar-thumb {
+  background: #004e89;
+  border-radius: 3px;
+}
+
+.selected-files::-webkit-scrollbar-thumb:hover {
+  background: #1a75b8;
+}
+
+/* Accessibility */
+.complaint-register-page .form-control:focus,
+.complaint-register-page .form-select:focus,
+.complaint-register-page .btn:focus,
+.complaint-register-page .category-card:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 78, 137, 0.25);
+}
+
+/* Print Styles */
+@media print {
+  .complaint-register-page {
+    background: white !important;
+  }
+
+  .complaint-register-page .card {
+    box-shadow: none !important;
+    border: 1px solid #dee2e6 !important;
+  }
+
+  .complaint-register-page .btn,
+  .complaint-register-page .file-upload-area {
+    display: none !important;
+  }
+
+  .complaint-register-page .alert {
+    border: 1px solid currentColor !important;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.complaint-register-page .card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.complaint-register-page .category-card {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.complaint-register-page .category-card:nth-child(1) { animation-delay: 0.1s; }
+.complaint-register-page .category-card:nth-child(2) { animation-delay: 0.2s; }
+.complaint-register-page .category-card:nth-child(3) { animation-delay: 0.3s; }
+.complaint-register-page .category-card:nth-child(4) { animation-delay: 0.4s; }
+.complaint-register-page .category-card:nth-child(5) { animation-delay: 0.5s; }
+.complaint-register-page .category-card:nth-child(6) { animation-delay: 0.6s; }
+.complaint-register-page .category-card:nth-child(7) { animation-delay: 0.7s; }
+.complaint-register-page .category-card:nth-child(8) { animation-delay: 0.8s; }
+.complaint-register-page .category-card:nth-child(9) { animation-delay: 0.9s; }
+.complaint-register-page .category-card:nth-child(10) { animation-delay: 1.0s; }
+
+/* Hover Effects */
+.complaint-register-page .card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+/* Focus States */
+.complaint-register-page .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 78, 137, 0.25);
+}
+
+/* Custom Checkboxes */
+.complaint-register-page .form-check-input:checked {
+  background-color: #004e89;
+  border-color: #004e89;
+}
+
+/* Textarea Auto-resize */
+.complaint-register-page textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Loading Overlay */
+.complaint-register-page .loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Success Animation */
+@keyframes success-checkmark {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+.success-checkmark {
+  animation: success-checkmark 0.6s ease-out;
+}
+
+/* Error Shake Animation */
+@keyframes error-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.error-shake {
+  animation: error-shake 0.5s ease-in-out;
+}
+
+/* Pulse Animation for Selected Category */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.category-card.selected {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Guidelines Modal Styling */
+.complaint-register-page .guidelines-modal .modal-dialog {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: calc(100vh - 1rem) !important;
+  margin: 0.5rem auto !important;
+}
+
+.complaint-register-page .guidelines-modal .modal-content {
+  border-radius: 15px !important;
+  border: none !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  max-height: 90vh !important;
+  overflow: hidden !important;
+}
+
+.complaint-register-page .guidelines-modal .modal-header {
+  border-radius: 15px 15px 0 0 !important;
+  border: none !important;
+  padding: 1.5rem 2rem !important;
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%) !important;
+}
+
+.complaint-register-page .guidelines-modal .modal-body {
+  padding: 2rem !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  background: #f8f9fa !important;
+}
+
+.complaint-register-page .guidelines-modal .modal-footer {
+  border: none !important;
+  padding: 1.5rem 2rem !important;
+  background: white !important;
+  border-radius: 0 0 15px 15px !important;
+}
+
+.complaint-register-page .guidelines-modal .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+/* Ensure modal is always on top */
+.complaint-register-page .guidelines-modal {
+  z-index: 1060 !important;
+}
+
+.complaint-register-page .guidelines-modal .modal-dialog {
+  z-index: 1061 !important;
+}
+
+/* Responsive modal adjustments */
+@media (max-width: 768px) {
+  .complaint-register-page .guidelines-modal .modal-dialog {
+    margin: 1rem !important;
+    min-height: calc(100vh - 2rem) !important;
+  }
+
+  .complaint-register-page .guidelines-modal .modal-content {
+    max-height: 95vh !important;
+  }
+
+  .complaint-register-page .guidelines-modal .modal-body {
+    padding: 1.5rem !important;
+    max-height: 75vh !important;
+  }
+
+  .complaint-register-page .guidelines-modal .modal-header,
+  .complaint-register-page .guidelines-modal .modal-footer {
+    padding: 1rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .complaint-register-page .guidelines-modal .modal-dialog {
+    margin: 0.5rem !important;
+  }
+
+  .complaint-register-page .guidelines-modal .modal-body {
+    padding: 1rem !important;
+  }
+}
+
+/* Custom scrollbar for modal content */
+.complaint-register-page .guidelines-modal .modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.complaint-register-page .guidelines-modal .modal-body::-webkit-scrollbar-track {
+  background: #e9ecef;
+  border-radius: 4px;
+}
+
+.complaint-register-page .guidelines-modal .modal-body::-webkit-scrollbar-thumb {
+  background: #17a2b8;
+  border-radius: 4px;
+}
+
+.complaint-register-page .guidelines-modal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #138496;
+}

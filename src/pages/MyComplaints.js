@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import axios from "../api/axios";
 
 function MyComplaints() {
+
   const [complaints, setComplaints] = useState([]);
 
   useEffect(() => {
+
     const fetchComplaints = async () => {
+
       const token = localStorage.getItem("token");
 
       const res = await axios.get("/complaints/my", {
@@ -16,11 +19,13 @@ function MyComplaints() {
     };
 
     fetchComplaints();
+
   }, []);
 
   return (
     <div>
       <h2>My Complaints</h2>
+
       {complaints.map((c) => (
         <div key={c._id}>
           <h4>{c.title}</h4>

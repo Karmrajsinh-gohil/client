@@ -50,12 +50,19 @@ function Dashboard() {
           <p>
             Welcome, {user.name} ({user.role})
           </p>
+          <button onClick={()=>navigate("/create-complaint")}>
+File New Complaint
+</button> <br></br><br></br>
+<button onClick={()=>navigate("/my-complaints")}>
+My Complaints
+</button> <br></br>
           <button
             onClick={handleLogout}
             style={{ marginTop: "20px", padding: "10px 20px", cursor: "pointer" }}
           >
             Logout
           </button>
+          
         </>
       ) : (
         <p>{message || "Loading..."}</p>
