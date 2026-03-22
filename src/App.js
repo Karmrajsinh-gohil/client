@@ -11,19 +11,24 @@ import CitizenLogin from "./citizen/Login";
 import CitizenRegister from "./citizen/Register";
 import CitizenDashboard from "./citizen/CitizenDashboard";
 import ComplaintRegister from "./citizen/ComplaintRegister";
+import Services from "./visitor/Services";
+import About from "./visitor/About";
+import HomePage from "./Home"
 
 function App() {
   return (
-<div>
-    
+<div>  
     <Router>
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/HomePage" element={<HomePage></HomePage>}/> 
         <Route path="/" element={<HomeRedirectRoute />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/citizen-login" element={<CitizenLogin />} />
         <Route path="/citizen-register" element={<CitizenRegister />} />
+        <Route path="/services-information" element={<Services/>}/>
+        <Route path="/about" element={<About/>}/>
         <Route
           path="/citizen-dashboard"
           element={

@@ -9,26 +9,91 @@ function Home() {
   return (
     <div>
       {/* Navbar */}
+      <div>
+      {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <span className="navbar-brand fw-bold">🇮🇳 BPGSTS</span>
+          <span
+            className="navbar-brand fw-bold"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/")}
+          >
+            🇮🇳 BPGSTS
+          </span>
+
           <span className="navbar-text text-light small ms-3">
             Bharat Public Grievance & Service Tracking System
           </span>
+
           <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
+            <ul className="navbar-nav ms-auto align-items-lg-center">
+
+              {/* Navigation Links */}
               <li className="nav-item">
+                <button
+                  className="nav-link btn btn-link text-light"
+                  onClick={() => navigate("/")}
+                >
+                  Home
+                </button>
+              </li>
+
+              <li className="nav-item">
+                <button
+                  className="nav-link btn btn-link text-light"
+                  onClick={() => navigate("/about")}
+                >
+                  About
+                </button>
+              </li>
+
+              <li className="nav-item">
+                <button
+                  className="nav-link btn btn-link text-light"
+                  onClick={() => navigate("/services-information")}
+                >
+                  Services
+                </button>
+              </li>
+
+              <li className="nav-item">
+                <button
+                  className="nav-link btn btn-link text-light"
+                  onClick={() => navigate("/categories")}
+                >
+                  Categories
+                </button>
+              </li>
+
+              <li className="nav-item">
+                <button
+                  className="nav-link btn btn-link text-light"
+                  onClick={() => navigate("/faqs")}
+                >
+                  FAQs
+                </button>
+              </li>
+
+              <li className="nav-item">
+                <button
+                  className="nav-link btn btn-link text-light"
+                  onClick={() => navigate("/contact")}
+                >
+                  Contact
+                </button>
+              </li>
+
+              {/* Auth Buttons */}
+              <li className="nav-item ms-lg-3">
                 <button
                   className="btn btn-light me-2"
                   onClick={() => navigate("/register")}
@@ -36,6 +101,7 @@ function Home() {
                   Register
                 </button>
               </li>
+
               <li className="nav-item">
                 <button
                   className="btn btn-outline-light"
@@ -44,11 +110,12 @@ function Home() {
                   Login
                 </button>
               </li>
+
             </ul>
           </div>
         </div>
       </nav>
-
+    </div>
       {/* Hero Section */}
       <header className="hero-section text-center text-white d-flex align-items-center justify-content-center">
         <div className="hero-content">
